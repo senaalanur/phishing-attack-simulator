@@ -12,11 +12,6 @@ Phishing is a type of cyber attack where attackers impersonate legitimate organi
 - **User Education**: The simulator provides tips and best practices for identifying and avoiding phishing attempts.
 - **Interactive Experience**: Engaging and interactive interface to enhance learning and retention.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
