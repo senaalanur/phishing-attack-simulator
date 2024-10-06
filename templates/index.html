@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Simulator</title>
+</head>
+<body>
+    <h2>Welcome to the Phishing Simulator</h2>
+
+    <!-- Check if the user is logged in by looking at the session variable -->
+    {% if session.get('MAIL_USERNAME') %}
+        <p>Logged in as: {{ session.get('MAIL_USERNAME') }}</p>
+
+        <!-- Form to send phishing email -->
+        <form action="/send_email" method="POST">
+            <label for="email">Recipient Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter recipient email" required>
+            <button type="submit">Send Phishing Email</button>
+        </form>
+
+        <!-- Option to log out -->
+        <form action="/logout" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+    {% else %}
+        <!-- If not logged in, show login form -->
+        <h2>Login to Your Account</h2>
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    {% endif %}
+</body>
+</html>
+
